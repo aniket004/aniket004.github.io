@@ -127,6 +127,14 @@
       width: 150px; height: 112px; object-fit: contain;
       border-radius: 6px; border: 1px solid var(--rule); background: #fff;
     }
+    .pub .thumb {
+      width: 150px; height: 112px; border-radius: 6px; border: 1px solid var(--rule);
+      background: var(--accent-soft); color: var(--accent);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; padding: 8px; font-family: "Source Serif 4", Georgia, serif;
+    }
+    .pub .thumb strong { font-size: 19px; line-height: 1.15; }
+    .pub .thumb small { font-family: "Inter", sans-serif; font-size: 11px; color: var(--muted); margin-top: 4px; letter-spacing: .04em; text-transform: uppercase; }
     .pub .title { font-weight: 600; font-size: 16px; line-height: 1.4; color: var(--text); }
     .pub .title:hover { color: var(--accent); }
     .pub .authors { font-size: 14px; color: var(--muted); margin: 3px 0; }
@@ -160,7 +168,7 @@
       .hero h1 { font-size: 32px; }
       .links { justify-content: center; }
       .pub { grid-template-columns: 1fr; gap: 10px; }
-      .pub img { width: 100%; height: 160px; }
+      .pub img, .pub .thumb { width: 100%; height: 160px; }
       .news li { grid-template-columns: 70px 1fr; }
     }
   </style>
@@ -184,7 +192,7 @@
     <header class="hero">
       <img src="images/aniket.jpg" alt="Aniket Roy">
       <div>
-        <h1>Aniket Roy, Ph.D.</h1>
+        <h1>Aniket Roy</h1>
         <p class="role">Researcher, Media Analytics Department</p>
         <p class="org"><a href="https://www.nec-labs.com/">NEC Laboratories America</a></p>
         <div class="links">
@@ -235,8 +243,12 @@
     <section id="news">
       <h2>News</h2>
       <ul class="news collapsed" id="news-list">
+        <li><span class="date">Jun 2026</span><span><b>KC-3DGS</b>, kurtosis-constrained Gaussian splatting for high-fidelity view synthesis, released on arXiv.</span></li>
+        <li><span class="date">Mar 2026</span><span>Doctoral Consortium paper, <i>Learning More from Less</i>, published in the AAAI 2026 proceedings.</span></li>
+        <li><span class="date">Sep 2025</span><span><b>Diffuse2Adapt</b> presented at ICIP 2025.</span></li>
         <li><span class="date">Aug 2025</span><span>Selected for the ICCV 2025 and AAAI 2026 Doctoral Consortiums.</span></li>
         <li><span class="date">Jun 2025</span><span><b>DuoLoRA</b> accepted to ICCV 2025; <b>DiffNat</b> accepted to TMLR.</span></li>
+        <li><span class="date">May 2025</span><span><b>AeroGen</b> presented at FG 2025.</span></li>
         <li><span class="date">Feb 2025</span><span>Two U.S. patents filed in collaboration with Qualcomm.</span></li>
         <li><span class="date">Oct 2024</span><span><b>Cap2Aug</b> accepted to WACV 2025; also presented at the MAR workshop at CVPR 2025.</span></li>
         <li><span class="date">Jul 2024</span><span><b>BRI3L</b> accepted to ICIP 2024.</span></li>
@@ -262,6 +274,28 @@
       <p class="note">* denotes equal contribution.</p>
 
       <div class="pub-group">Generative Models &amp; Personalization</div>
+
+      <div class="pub">
+        <div class="thumb" aria-hidden="true"><strong>KC-3DGS</strong><small>arXiv 2026</small></div>
+        <div>
+          <a class="title" href="https://arxiv.org/abs/2606.03120">KC-3DGS: Kurtosis-Constrained Gaussian Splatting for High-Fidelity View Synthesis</a>
+          <div class="authors">Vivekjyoti Banerjee, Abhay Yadav, Rama Chellappa, <b>Aniket Roy</b></div>
+          <div class="venue"><span class="badge">Preprint 2026</span></div>
+          <p class="desc">Wavelet-domain supervision for 3D Gaussian Splatting, combining multi-scale coefficient alignment, kurtosis concentration, and cross-band covariance penalties to improve rendering quality, especially from sparse views.</p>
+          <div class="actions"><a href="https://arxiv.org/abs/2606.03120">Paper</a></div>
+        </div>
+      </div>
+
+      <div class="pub">
+        <div class="thumb" aria-hidden="true"><strong>AAAI-26</strong><small>Doctoral Consortium</small></div>
+        <div>
+          <a class="title" href="https://ojs.aaai.org/index.php/AAAI/article/view/42162">Learning More from Less: Resource-Constrained Generative AI for Classification, Generation, and Personalization</a>
+          <div class="authors"><b>Aniket Roy</b></div>
+          <div class="venue"><span class="badge">AAAI 2026</span><span>Doctoral Consortium</span></div>
+          <p class="desc">An overview of my doctoral research on resource-efficient generative AI: uncertainty-guided mixup for few-shot learning, diffusion models grounded in natural image statistics, and parameter-efficient low-rank adapters for personalized synthesis.</p>
+          <div class="actions"><a href="https://ojs.aaai.org/index.php/AAAI/article/view/42162">Paper</a></div>
+        </div>
+      </div>
 
       <div class="pub">
         <img src="images/duolora.png" alt="DuoLoRA">
@@ -297,6 +331,17 @@
       </div>
 
       <div class="pub">
+        <div class="thumb" aria-hidden="true"><strong>Diffuse2Adapt</strong><small>ICIP 2025</small></div>
+        <div>
+          <a class="title" href="https://ieeexplore.ieee.org/abstract/document/11084383/">Diffuse2Adapt: Controlled Diffusion for Synthetic-to-Real Domain Adaptation</a>
+          <div class="authors">Ketul Shah, Arushi Sinha, Arun Reddy, <b>Aniket Roy</b>, Rama Chellappa</div>
+          <div class="venue"><span class="badge">ICIP 2025</span></div>
+          <p class="desc">Uses controlled diffusion to bridge the gap between synthetic training data and real-world imagery for domain adaptation.</p>
+          <div class="actions"><a href="https://ieeexplore.ieee.org/abstract/document/11084383/">Paper</a></div>
+        </div>
+      </div>
+
+      <div class="pub">
         <img src="images/Bars.png" alt="DiversiNet">
         <div>
           <a class="title" href="https://ieeexplore.ieee.org/abstract/document/10744513">DiversiNet: Mitigating Bias in Deep Classification Networks across Sensitive Attributes through Diffusion-Generated Data</a>
@@ -308,6 +353,17 @@
       </div>
 
       <div class="pub-group">Few-Shot, Multimodal &amp; Representation Learning</div>
+
+      <div class="pub">
+        <div class="thumb" aria-hidden="true"><strong>AeroGen</strong><small>FG 2025</small></div>
+        <div>
+          <a class="title" href="https://ieeexplore.ieee.org/abstract/document/11099250">AeroGen: Ground-to-Air Generalization for Action Recognition</a>
+          <div class="authors">Ketul Shah, Anshul Shah, Arun Reddy, <b>Aniket Roy</b>, Celso M. de Melo, Rama Chellappa</div>
+          <div class="venue"><span class="badge">FG 2025</span></div>
+          <p class="desc">Generalizing action recognition from ground-level video to aerial viewpoints.</p>
+          <div class="actions"><a href="https://ieeexplore.ieee.org/abstract/document/11099250">Paper</a></div>
+        </div>
+      </div>
 
       <div class="pub">
         <img src="images/cap2aug.PNG" alt="Cap2Aug">
